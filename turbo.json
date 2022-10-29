@@ -1,0 +1,32 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "deploy": {
+      "dependsOn": ["build", "test", "lint"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "dependsOn": ["^dev"]
+    },
+    "eslint": {},
+    "lint": {},
+    "stylelint": {},
+    "test": {},
+    "test:coverage": {
+      "cache": false,
+      "outputs": ["coverage/**", "tests-report.xml"]
+    },
+    "test:watch": {
+      "cache": false
+    },
+    "type-check": {}
+  }
+}

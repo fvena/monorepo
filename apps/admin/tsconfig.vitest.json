@@ -1,0 +1,5 @@
+{
+  "extends": "@portfolio/style-guide/typescript/tsconfig.vitest.json",
+  "include": ["src/**/*.spec.ts"],
+  "exclude": []
+}

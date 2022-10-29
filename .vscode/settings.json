@@ -1,0 +1,95 @@
+{
+    // ===
+    // General
+    // ===
+    "search.exclude": {
+        "**/coverage": true,
+        "**/e2e": true
+    },
+
+    // ===
+    // Spacing
+    // ===
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+
+    // ===
+    // Eslint + Prettier
+    // ===
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": false,
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "editor.linkedEditing": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.run": "onSave",
+    "eslint.validate": ["javascript", "javascriptreact", "vue"],
+    "javascript.format.enable": false,
+
+    // ===
+    // Javascript & Typescript
+    // ===
+    "javascript.suggest.autoImports": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.suggest.autoImports": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "source.organizeImports": true,
+
+    // ===
+    // CSS
+    // ===
+    "stylelint.enable": true,
+    "css.validate": false,
+    "scss.validate": false,
+    "stylelint.validate": ["css", "scss", "postcss", "vue"],
+
+    // ===
+    // MARKDOWN
+    // ===
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 100
+    },
+    "markdownlint.config": {
+        "line-length": false,
+        "first-line-h1": false,
+        "no-multiple-blanks": false,
+        "list-marker-space": false
+    },
+
+    // ===
+    // SonarLint
+    // ===
+    "sonarlint.connectedMode.project": {
+        "projectKey": "portfolio-exchange_pe-front"
+    },
+
+    // ===
+    // Todo tree
+    // ===
+    "todo-tree.regex.regex": "(//|//-|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)",
+
+    // ===
+    // Vue
+    // ===
+    "docwriter.style": "JSDoc",
+    "volar.codeLens.pugTools": true,
+    "volar.format.initialIndent": {
+        "html": true,
+        "pug": true,
+        "css": true,
+        "scss": true,
+        "typescript": true,
+        "javascript": true
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    }
+}

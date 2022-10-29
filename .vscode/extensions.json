@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "davidanson.vscode-markdownlint",
+    "gruntfuggly.todo-tree",
+    "sonarsource.sonarlint-vscode",
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "usernamehw.errorlens",
+    "syler.sass-indented",
+  ]
+}

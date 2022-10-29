@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "changeset": "changeset",
+    "clean": "turbo run clean && rimraf node_modules && rimraf coverage && rimraf tests-report.xml",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "eslint": "turbo run eslint",
+    "postinstall": "npm run syncpack && npm run build",
+    "lint": "turbo run lint",
+    "prepare": "husky install",
+    "release": "turbo run build && changeset version",
+    "stylelint": "turbo run stylelint",
+    "syncpack": "syncpack fix-mismatches --filter \"^(?!@portfolio/).*\"",
+    "test": "turbo run test",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui --open",
+    "test:watch": "turbo run test:watch",
+    "type-check": "turbo run type-check",
+    "update": "ncu --interactive --format group -ws"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.7",
+    "@changesets/cli": "^2.25.0",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@portfolio/style-guide": "*",
+    "@vitest/coverage-c8": "^0.24.1",
+    "@vitest/ui": "^0.24.1",
+    "eslint": "^8.25.0",
+    "husky": "^8.0.1",
+    "rimraf": "^3.0.2",
+    "syncpack": "^8.2.4",
+    "turbo": "^1.5.6",
+    "vitest": "^0.24.3"
+  },
+  "packageManager": "npm@8.19.1",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=8.0.0"
+  }
+}

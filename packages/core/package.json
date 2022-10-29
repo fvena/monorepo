@@ -1,0 +1,38 @@
+{
+  "name": "@portfolio/core",
+  "version": "0.1.0",
+  "description": "Portfolio Exchange Core, this project contains all reusable entities and logic",
+  "exports": {
+    ".": {
+      "import": "./dist/portfolio-core.es.js",
+      "type": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/portfolio-core.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "clean": "rimraf .turbo && rimraf node_modules && rimraf dist && rimraf coverage",
+    "dev": "vite build --watch",
+    "eslint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint": "npm run eslint && npm run type-check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc --noEmit"
+  },
+  "prettier": "@portfolio/style-guide/prettier",
+  "devDependencies": {
+    "@portfolio/style-guide": "*",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "eslint": "^8.25.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8",
+    "vite-plugin-dts": "^1.6.6",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^0.24.3"
+  }
+}

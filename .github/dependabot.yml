@@ -1,0 +1,51 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    target-branch: "main"
+    labels:
+      - "npm dependencies"
+      - "Base"
+  - package-ecosystem: "npm"
+    directory: "/apps/admin"
+    schedule:
+      interval: "weekly"
+    target-branch: "main"
+    labels:
+      - "npm dependencies"
+      - "Admin"
+  - package-ecosystem: "npm"
+    directory: "/apps/app"
+    schedule:
+      interval: "weekly"
+    target-branch: "main"
+    labels:
+      - "npm dependencies"
+      - "App"
+  - package-ecosystem: "npm"
+    directory: "/packages/core"
+    schedule:
+      interval: "weekly"
+    target-branch: "main"
+    labels:
+      - "npm dependencies"
+      - "Core"
+  - package-ecosystem: "npm"
+    directory: "/packages/ui"
+    schedule:
+      interval: "weekly"
+    target-branch: "main"
+    labels:
+      - "npm dependencies"
+      - "UI"
+  - package-ecosystem: "npm"
+    directory: "/packages/style-guide"
+    schedule:
+      interval: "weekly"
+    target-branch: "main"
+    labels:
+      - "npm dependencies"
+      - "Style-guide"

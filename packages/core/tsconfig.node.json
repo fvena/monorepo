@@ -1,0 +1,12 @@
+{
+  "extends": "@portfolio/style-guide/typescript/tsconfig.node.json",
+  "include": ["vite.config.*", "env.d.ts", "src/**/*", ".eslintrc.js"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "dist",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}

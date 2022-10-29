@@ -1,0 +1,4 @@
+{
+  "extends": "@portfolio/style-guide/typescript/tsconfig.config.json",
+  "include": ["vite.config.*", "vitest.config.*", ".eslintrc.js"]
+}
